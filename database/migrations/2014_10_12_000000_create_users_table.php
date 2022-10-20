@@ -19,6 +19,24 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('avatar')->nullable();
+            $table->date('dtnascimento');
+            $table->string('cpf')->unique();
+            $table->string('documento')->nullable();
+            $table->string('telefone')->nullable();
+            $table->enum('genero', ['M', 'F', 'O', 'ND']);
+            $table->string('cep', 8);
+            $table->string('logradouro');
+            $table->string('numero');
+            $table->string('complemento')->nullable();
+            $table->string('bairro');
+            $table->string('cidade');
+            $table->char('uf', 2);
+            
+        /*     //Chaves FK
+            $table->unsignedBigInteger('instituicaos_id');
+            $table->foreign('instituicaos_id')->references('id')->on('instituicaos'); */
+
             $table->rememberToken();
             $table->timestamps();
         });

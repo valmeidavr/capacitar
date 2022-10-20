@@ -19,8 +19,6 @@
     <header>
         <img src="{{ asset('img/fcsn-capacitar-branco.png') }}" alt="Não foi possivel carregar a imagem">
     </header>
-
-
     <main>
         <!-- Form-->
         <form method="POST" action="{{ route('login') }}">
@@ -50,8 +48,6 @@
                  @endif
             </div>
         </form>
-
-
     </main>
 
     <!-- Footer -->

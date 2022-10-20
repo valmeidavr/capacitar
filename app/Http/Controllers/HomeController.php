@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function cadastrar() {
+        return view('cadastrar');
+    }
+
+    public function cadastrar_salvar(Request $request) {
+        dd($request->all());
+    }
 }
