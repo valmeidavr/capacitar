@@ -1,0 +1,351 @@
+.h1{color: #292944; font-weight: bolder;}
+
+
+a {
+    color: #292944;
+}
+
+#imagem {
+    position: absolute;
+    right: 3vh;
+}
+
+#text-span {
+    color: #292944;
+    font-size: xx-large;
+    left: 3%;
+    position: fixed;
+}
+
+#periodo {
+    position: fixed;
+    font-size: x-large;
+    left: 3%;
+    top: 20%;
+}
+
+#combox-periodo {
+    position: fixed;
+    left: 4.5vh;
+    top: 30%;
+    width: 20vh;
+}
+
+#hotel {
+    position: fixed;
+    font-size: x-large;
+    left: 20%;
+    top: 20%;
+}
+
+#combox-hotel {
+    position: fixed;
+    left: 30vh;
+    top: 30%;
+    width: 31vh;
+}
+
+#setor {
+    position: fixed;
+    font-size: x-large;
+    left: 3%;
+    top: 40%;
+}
+
+#combox-setor {
+    position: fixed;
+    left: 4.5vh;
+    top: 50%;
+    width: 20vh;
+
+}
+
+#DataSelecionada{
+    font-size: x-large;
+}
+
+#data{
+    font-size:24px;
+    color: var(--indisponivel);
+    border: none;
+
+}
+
+#Agendar:hover {
+    background-color: #edb700;
+    color: #292944;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#Agendar {
+    background-color: #292944;
+     color: white;
+    padding: 2vh;
+    width: 30%;
+    border-radius: 100px;
+    margin-top: 5vh;
+    border: none;
+
+}
+
+/************** CSS CALENDARIO ****************/
+
+:root {
+    --disponivel: #00915c;
+    --disponivel-active: #105736;
+    --disponivel-hover: #00d084;
+    --indisponivel: #cf2e2e;
+    --indisponivel-hover: #f78da7;
+    --dark-body: #4d4c5a;
+    --dark-main: #141529;
+    --dark-second: #79788c;
+    --dark-hover: #323048;
+    --dark-text: #f8fbff;
+
+    --light-body: #f3f8fe;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8; 
+    --light-hover: #edf0f5;
+    --light-text: #151426;
+
+    --blue: #0000ff;
+    --white: #fff;
+
+    --shadow: rgba(100, 100, 111, 0.5) 0px 5px 5px 0px;
+    --shadow-hover: rgba(100, 100, 111, 0.5) 0px 6px 6px 2px;
+
+    --font-family: cursive;
+}
+
+.calendar {
+    height:max-content;
+    width: 100%;
+    background-color: var(--bg-main);
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    /* transform: scale(1.25); */
+    box-shadow: var(--shadow);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--color-text);
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+
+
+.calendar-week-day {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.calendar-week-day div {
+    display: grid;
+    place-items: center;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.calendar-day-hover:hover{
+    background-color: var(--disponivel-hover);
+    transition: 0.1s;
+}
+.calendar-day-hover:active{
+    background-color: var(--disponivel-active);
+    color: white;
+}
+/*.calendar-days div:nth-child(29) {
+    background-color: ;
+    margin-bottom: 7vh;
+}*/
+.calendar-days div {
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    background-color: var(--disponivel);
+    border-radius: 50px;
+    animation: to-top 1s forwards;
+}
+
+.calendar-days div:empty {
+    background-color: var(--bg-main);
+} 
+
+.calendar-days div:not(:empty):hover {
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.month-picker {
+    background-color: #f1f2ea;
+    box-shadow: var(--shadow);
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.month-picker:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.year-picker {
+    display: flex;
+    align-items: center;
+}
+
+.year-change {
+    background-color: whitesmoke;
+    box-shadow: var(--shadow);
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    margin: 0 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.year-change:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.calendar-footer {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+}
+
+.legend div {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+
+}
+
+.circle span{
+    margin-left: 30px;
+}
+
+
+#Disponivel {
+    background-color: var(--disponivel);
+}
+
+#Cheio {
+    background-color: var(--indisponivel);
+    margin-right: 70px;
+    margin-left: 10px;
+}
+
+#Indisponivel {
+    background-color: #4d4c5a;
+}
+
+.month-list{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #D9D9D9;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    transform: scale(1.5);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.month-list.show {
+    font-weight: bold;
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: visible;
+    transition: all 0.2s ease-in-out;
+}
+
+.month-list > div {
+    display: grid;
+    place-items: center;
+}
+
+.month-list > div > div{
+    display: flex;
+    background-color: #f1f2ea;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.month-list > div > div:hover {
+    box-shadow: var(--shadow-hover);
+    transition: 0.5s;
+
+}
+
+.diaCheio{
+    background-color: var(--indisponivel);
+}
+
+.diaIndisponivel{
+    background-color: #4d4c5a;
+}
+
+
+@keyframes to-top {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* CSS COMBO */

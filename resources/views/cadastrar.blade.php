@@ -4,7 +4,7 @@
     Cadastrar 
 @endsection
 @section('conteudo')
-<div class="container">
+<div class="meio">
     <section class="frm_cadastro">
         <form method="POST" action="{{ route('cadastrar-salvar')}}">
           @csrf  

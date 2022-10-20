@@ -16,7 +16,10 @@ class CreateAgendamentosTable extends Migration
         Schema::create('agendamentos', function (Blueprint $table) {
             $table->bigIncrements('id');            
             $table->date('dt');
-            $table->enum('status', ['A', 'I', 'N']);
+         
+            $table->enum('periodo', ['M', 'T', 'I']);
+
+            $table->enum('status', ['A', 'I']);
 
             //FK Chaves
             $table->unsignedBigInteger('hotels_id');
@@ -27,6 +30,7 @@ class CreateAgendamentosTable extends Migration
 
             $table->unsignedBigInteger('setors_id');
             $table->foreign('setors_id')->references('id')->on('setors');
+          
             
             $table->timestamps();
         });
