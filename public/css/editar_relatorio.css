@@ -1,0 +1,156 @@
+@font-face { /* Adicionando a fonte Montserrat */
+    font-family: Montserrat;
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+
+}
+
+
+* {
+
+    font-family: 'Montserrat';
+
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    /* adicionando imagem de fundo */
+    margin: 0;
+    
+    background-color: #f1f2ea;
+    
+}
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    /* ^^^^ ESSA LINHA CENTRALIZA TODOS OS ITENS DO HEADER NO MEIO */
+    padding: 1vh;
+    width: 100%;
+    background-color: #292944;
+    z-index: 1;
+    
+}
+header img {
+    height: 19%;
+    width: 14%;
+    object-fit: fill;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+#card{
+    margin-left: 28vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25vh;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    position: absolute;
+    padding: 4vh;
+    border-radius: 25px;
+    width: 70%;
+    height: 60%;
+    
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#relatorio{
+position: static;
+height: 40vh;
+width: 118vh;
+background-color: #f1f2ea;
+border-color: black;
+}
+textarea::-webkit-scrollbar {
+    width: 12px;
+}
+
+textarea:-webkit-scrollbar-track {
+    background: white;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+#enviar{
+position: absolute;
+background-color: #292944;
+border-radius: 100px;
+border: none;
+padding: 2vh;
+color: white;
+margin-top: 45vh;
+margin-left: 44%;
+}
+#enviar:hover{
+cursor: pointer;
+color: #00b6ca;
+}
+#escita-relatorio{
+    color: #292944;
+    position: absolute;
+    margin-top: 18vh;
+    margin-left: 35vh;
+}
+
+
+footer {
+    position: static;
+    display: flex;
+    margin-top: 100vh;
+    bottom: 0;
+    background-color: #292944;
+    color: #FFF;
+    width: 100%;
+    height: 100%;    
+    text-align: center;
+}
+#imgPhoto-footer {
+    width: 20vh;
+    margin-top: 5vh;
+    margin-left: 2vh;
+}
+
+#meio-footer {
+    margin-left: 50vh;
+}
+
+#dir-footer {
+    margin-left: 58vh;
+}
+
+#t-footer {
+    color: #edb700;
+    
+}
+
+#r-Social {
+    text-decoration: none;
+    color: white;
+}
+
+#r-Social:hover {
+    color: gray;
+    transition: 0.3s;
+}
+
+

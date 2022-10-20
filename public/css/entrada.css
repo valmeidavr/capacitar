@@ -1,0 +1,24 @@
+@font-face { /* Adicionando a fonte Montserrat */
+    font-family: Montserrat;
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+
+}
+
+
+* {
+
+    font-family: 'Montserrat';
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /* adicionando imagem de fundo */
+    margin: 0;
+    
+    background-color: #f1f2ea;
+    
+}

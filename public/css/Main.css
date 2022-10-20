@@ -1,0 +1,270 @@
+@font-face { /* Adicionando a fonte Montserrat */
+    font-family: Montserrat;
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+
+}
+
+@font-face { /* Adicionando a fonte Montserrat */
+    font-family: Montserrat;
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+
+}
+
+
+* {
+
+    font-family: 'Montserrat';
+
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f2ea; 
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    /* ^^^^ ESSA LINHA CENTRALIZA TODOS OS ITENS DO HEADER NO MEIO */
+    padding: 1vh;
+    width: 100%;
+    background-color: #292944;
+    z-index: 1;
+}
+
+header a {
+
+    color: #edb700;
+    text-decoration: none;
+    position: fixed;
+    right: 3vh;
+    font-size: 2vh;
+
+}
+header a:hover{
+    transition: 0.6;
+    color:white;
+
+}
+
+header img {
+    height: 19%;
+    width: 14%;
+    object-fit: fill;
+}
+
+#nome:hover {
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+#informacoes_basicas {
+    margin-left: 35vh;
+    display: flex;
+    margin-top: 15vh;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    position: absolute;
+    padding: 4vh;
+    border-radius: 25px;
+    width: 59%;
+}
+
+.image-conteiner {
+    margin-right: 5vh;
+    margin-top: 5vh;
+}
+#direita {
+    margin-right: 5vh;
+}
+#negrito_nome {
+    font-weight: bold;
+    font-size: 3vh;
+    color: #292944;
+}
+#negrito {
+    font-weight: bold;
+    color: #292944;
+}
+
+#relatorioEscrita {
+    font-weight: bold;
+    font-size: 4.5vh;
+    color: #292944;
+    margin-top: 57vh;
+    margin-left: 37vh; 
+}
+#adicionar-relatorio{
+    font-weight: bold;
+    font-size: 1.7vh;
+    color: #292944;
+    margin-top: -3.5vh;
+    margin-left: 60vh; 
+    text-decoration: none;
+}
+
+#adicionar-relatorio:hover {
+    color: #00b6ca;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#relatorio {
+    margin-left: 35vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 68vh;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    position: absolute;
+    padding: 4vh;
+    border-radius: 25px;
+    width: 59%;
+    
+}
+#card-competencias{
+    margin-left: 35vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 138vh;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    position: absolute;
+    padding: 4vh;
+    border-radius: 25px;
+    width: 59%;
+    height: 30%;
+}
+#escrita-competencias{
+    font-weight: bold;
+    font-size: 4.5vh;
+    color: #292944;
+    margin-top: 67vh;
+    margin-left: 37vh; 
+}
+
+#card-competencias-02{
+    margin-left: 35vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 170vh;
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    position: absolute;
+    padding: 4vh;
+    border-radius: 25px;
+    width: 59%;
+    height: 30%;
+}
+
+
+input[type='file']{
+    display: grid;
+}
+
+#imgPhoto{
+    position: relative;
+    left: 1%;
+    top: -1.5vh;
+    width: 25vh;
+    object-fit: cover;
+    height: 25vh;
+    padding: 1px;
+    border:2px  black;
+    border-radius: 60%;
+    cursor: pointer;
+    transition: background.3s;
+}
+
+#imgPhoto:hover{
+background-color: white;
+border: 1px black;
+}
+
+#imagem-header{
+    right: 10%;
+    position: fixed;
+    align-items: center;
+}
+
+footer {
+    position: static;
+    display: flex;
+    margin-top: 100vh;
+    bottom: 0;
+    background-color: #292944;
+    color: #FFF;
+    width: 100%;
+    height: 100%;    
+    text-align: center;
+}
+
+#img-edit{
+position: absolute;
+width: 2.2rem;
+height: 2.2rem;
+left: 75%;
+margin-top: -1.5vh;
+margin-left: 19vh;
+}
+#img-edit:hover{
+    background-color: grey;
+    color: white;
+    border-radius:50% 6px; 
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#imgPhoto-footer {
+    width: 20vh;
+    margin-top: 5vh;
+    margin-left: 2vh;
+}
+
+#meio-footer {
+    margin-left: 50vh;
+}
+
+#dir-footer {
+    margin-left: 58vh;
+}
+
+#t-footer {
+    color: #edb700;
+}
+
+#r-Social {
+    text-decoration: none;
+    color: white;
+}
+
+#r-Social:hover {
+    color: gray;
+    transition: 0.3s;
+}
+
+
+

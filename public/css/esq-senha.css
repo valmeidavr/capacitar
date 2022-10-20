@@ -1,0 +1,158 @@
+
+#overlay {
+    background-color: rgba(95, 95, 95, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+
+#cartao {
+
+    box-sizing: border-box;
+    box-shadow: 0px 6px 10px 1px #0000007b;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vh;
+    height: 50vh;
+    padding: 5vh;
+    border-radius: 15px;
+
+}
+
+#input-e-mail {
+    height: 2%;
+    width: 94%;
+    position: relative;
+    border: 0;
+    border-bottom: 2px solid #292944;
+    display: inline-block;
+    margin-bottom: 3vh;
+    background-color: #F2F1EA;
+    padding: 2vh;
+    outline: none;
+    font-size: 1.5vh;
+    transition: 0.3s
+}
+
+#input-e-mail:focus, #input-e-mail:hover{
+    border-bottom: 2px solid #00b6ca;
+}
+
+#input-e-mail::placeholder{
+    border-color: blue;
+}
+
+button, #confirmar {
+    position: relative;
+
+    background-color: rgba(41, 41, 68, 1);
+    border-radius: 100px;
+    border: none;
+    padding: 2vh;
+    width: 25%;
+    left: 37%;  
+    color: white;
+    font-size: 1.5vh;
+
+    transition: 0.2s;
+}
+
+#confirmar:hover {
+    
+    background-color: #6279b8;
+    color: white;
+    cursor: pointer;
+}
+
+
+#campo-01{
+
+    color: #292944;
+    position: relative;
+    margin-bottom: 3vh;
+    font-size: 15px;
+    
+}
+
+#logo-campo{
+
+    height: 5vh;
+    margin-bottom: 8vh;
+
+}
+
+a,#contato{
+    position: relative;
+    left: 15%;
+    font-size: 1.5vh;
+}
+
+#contato:hover{
+    transition: 0.1;
+    color: gray;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    position: static;
+    display: flex;
+    margin-top: 100vh;
+    bottom: 0;
+    background-color: #292944;
+    color: #FFF;
+    width: 100%;
+    height: 100%;    
+    text-align: center;
+}
+
+#img-edit{
+position: absolute;
+width: 2.2rem;
+height: 2.2rem;
+left: 75%;
+margin-top: -1.5vh;
+margin-left: 19vh;
+}
+#img-edit:hover{
+    background-color: grey;
+    color: white;
+    border-radius:50% 6px; 
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#imgPhoto-footer {
+    width: 20vh;
+    margin-top: 5vh;
+    margin-left: 2vh;
+}
+
+#meio-footer {
+    margin-left: 50vh;
+}
+
+#dir-footer {
+    margin-left: 58vh;
+}
+
+#t-footer {
+    color: #edb700;
+}
+
+#r-Social {
+    text-decoration: none;
+    color: white;
+}
+
+#r-Social:hover {
+    color: gray;
+    transition: 0.3s;
+}
+
