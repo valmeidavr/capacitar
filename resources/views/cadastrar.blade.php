@@ -11,20 +11,20 @@
           <div class="form-row">
             <div class="form-group col-md-12">
               <label >Nome</label>
-              <input type="email" class="form-control" name="name" placeholder="Nome">
+              <input type="text" class="form-control" name="name" placeholder="Nome">
             </div>           
          </div>
          <div class="form-row">
           <div class="form-group col-md-6">
             <label >E-mail</label>
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="email" name="email" class="form-control" placeholder="Email">
           </div>
           <div class="form-group col-md-6">
             <label >Senha</label>
-            <input type="password" class="form-control" placeholder="Senha">
+            <input type="password" name="password" class="form-control" placeholder="Senha">
           </div>
        </div>
-       
+
 
          <div class="form-row">
             <div class="form-group col-md-3">
@@ -76,11 +76,22 @@
               <input type="text" class="form-control" name="logradouro">
             </div>
            </div>
+           <div class="form-row">
+           
+            <div class="form-group col-md-2">
+              <label >Número</label>
+              <input type="text" class="form-control" name="numero">
+            </div>
+            <div class="form-group col-md-10">
+              <label >Complemento</label>
+              <input type="text" class="form-control" name="complemento">
+            </div>
+           </div>
 
            <div class="form-row">
                 <div class="form-group col-md-6">
                     <label >Bairro</label>
-                    <input type="text" class="form-control" name="complemento">
+                    <input type="text" class="form-control" name="bairro">
                 </div>
                 <div class="form-group col-md-6">
                     <label >Cidade</label>
@@ -91,7 +102,7 @@
               <div class="form-row">
               <div class="form-group col-md-1">
                 <label>UF</label>
-                <input type="text" class="form-control" name="uf" placeholder="RJ">
+                <input type="text" class="form-control" name="uf" value="RJ" placeholder="RJ">
               </div>
             </div>     
             <button type="submit" class="btn btn-primary">Cadastrar</button>

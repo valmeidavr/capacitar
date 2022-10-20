@@ -13,12 +13,13 @@
 
 <body>
     <header>
-        <img src="{{asset('img/fcsn-capacitar-branco.png')}}" alt="Não foi possivel carregar a imagem">
+        <img src="{{asset('img/fcsn-capacitar-branco.png')}}" alt="Não foi possivel carregar a imagem"> 
         <ul>
+            <li><a href="/home/">Home</a></li>
             <li><a href="/cadastrar/">Cadastro</a></li>
             <li><a href="/agendamento/">Agendamento</a></li>
             <li><a href="/relatorio/">Relatório</a></li>
-            <li class="perfil"><a style= "color: black" href="/perfil/{{ Auth::user()->id }}"> Perfil: {{ Auth::user()->name }} </a> </li>
+            <li class="perfil"><a style= "color: black" href="/logout">{{ Auth::user()->name }} </a> </li>
         </ul>
     </header>
 

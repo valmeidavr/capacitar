@@ -6,7 +6,7 @@ body {
     /* adicionando imagem de fundo */
     margin: 0;
     
-    background-image: linear-gradient(to bottom, transparent 0%, #504f4faa 0%), url(../assets/HotelBelaVista.jpg);
+    background-image: linear-gradient(to bottom, transparent 0%, #504f4faa 0%), url(../img/HotelBelaVista.jpg);
 
     background-size: cover;
     

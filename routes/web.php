@@ -20,3 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/cadastrar', 'HomeController@cadastrar')->name('cadastrar');
 Route::post('/cadastrar/store', 'HomeController@cadastrar_salvar')->name('cadastrar-salvar');
+Route::get('/logout',function(){
+    Auth::logout();
+    return redirect('/login');
+});
