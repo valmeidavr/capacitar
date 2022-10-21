@@ -28,7 +28,7 @@ class AgendamentoController extends Controller
         ];
 
         Agendamento::create($agendamento);
-       
+      
         return redirect()
             ->action('AgendamentoController@index')
             ->with('mensagem', 'Agendamento criado com sucesso!');
@@ -38,4 +38,23 @@ class AgendamentoController extends Controller
         $setores = Setor::where('hotels_id', $id)->get();
         return $setores;
    }
+
+   public function relatorio() {
+        $hotels = Hotel::all();
+        return view('relatorio', compact('hotels'));
+   }
+
+   public function search_relatorio(Request $request) {
+        $hotels = Hotel::all();
+        $agendamentos = Agendamento::where('dt', '=', $request->dt)
+            ->where('hotels_id', '=', $request->hotels_id)
+            ->where('status', 'A')
+            ->get();
+        return view('relatorio', compact('agendamentos', 'hotels'));
+    }
+
+    public function inativar_agenda($id) {
+       Agendamento::where('id', $id)->update(['status' => 'I']);
+       return redirect()->action('AgendamentoController@relatorio')->with('mensagem', 'Agendamento inativado com sucesso!');
+    }
 }

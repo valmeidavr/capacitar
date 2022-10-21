@@ -23,6 +23,11 @@ Route::post('/cadastrar/store', 'HomeController@cadastrar_salvar')->name('cadast
 Route::get('/agendamento','AgendamentoController@index')->name('agendamento-index');
 Route::post('/agendar','AgendamentoController@agendar')->name('agendar');
 Route::get('/call_setores/{id}', 'AgendamentoController@call_setores')->name('call-setores');
+Route::get('/relatorio', 'AgendamentoController@relatorio')->name('relatorio');
+Route::post('/search/relatorio', 'AgendamentoController@search_relatorio')->name('search-relatorio');
+Route::get('/inativar_agendamento/{id}', 'AgendamentoController@inativar_agenda')->name('inativar-agenda');
+
+
 Route::get('/logout',function(){
     Auth::logout();
     return redirect('/login');
