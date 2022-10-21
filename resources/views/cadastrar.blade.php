@@ -6,6 +6,14 @@
 @section('conteudo')
 <div class="meio">
     <section class="frm_cadastro">
+      @if(session('mensagem'))
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{session('mensagem')}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+    @endif
         <form method="POST" action="{{ route('cadastrar-salvar')}}">
           @csrf  
           <div class="form-row">
@@ -45,7 +53,7 @@
 
             <div class="form-group col-md-3">
               <label >Telefone</label>
-              <input type="text" class="form-control" name="telefone" placeholder="Telefone" required>
+              <input type="text" class="form-control" name="telefone" id='telefone' placeholder="Telefone" required data-mask="(99)99999-9999">
             </div>
 
 
@@ -55,7 +63,7 @@
           <div class="form-row">
             <div class="form-group col-md-3">
               <label >CPF</label>
-              <input type="number" class="form-control" name="cpf" placeholder="CPF" required>
+              <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" data-mask="999.999.999-99" required>
             </div>
 
 
@@ -69,7 +77,7 @@
            <div class="form-row">
             <div class="form-group col-md-2">
                 <label >CEP</label>
-                <input type="text" id="cep" class="form-control" name="cep" required>
+                <input type="number" id="cep" class="form-control" name="cep" required>
             </div>
             <div class="form-group col-md-10">
               <label >Logradouro</label>
@@ -112,10 +120,5 @@
 @endsection
 
 @section('scripts')
-<script type="text/javascript">
-    $(document).ready(function(){
-      $("#cep").mask("99.999-999");
-      $("#cpf").mask("999.999.999-99");
-    });
-  </script>
+
 @endsection

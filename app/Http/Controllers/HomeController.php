@@ -51,6 +51,9 @@ class HomeController extends Controller
             'uf' => $request->uf
         ]);
 
-        return view('home');
+        return redirect()
+        ->action('HomeController@cadastrar')
+        ->with('mensagem', 'Cadastro realizado com sucesso!');
+
     }
 }
