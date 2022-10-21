@@ -51,9 +51,9 @@ generateCalendar = (month, year) => {
             let DateSelect = document.getElementById("data")
             if (day.id != "") {
                 if(day.id.length == 1){
-                    document.getElementById('data').value = 0+day.id + "-" + mes + "-" + year
+                    document.getElementById('data').value =  year + "-" + mes + "-" +  0+day.id
                 }else{
-                document.getElementById('data').value = day.id + "-" + mes + "-" + year
+                document.getElementById('data').value = year + "-" + mes + "-" +  day.id
                 //DateSelect.textContent = day.id + " / " + mes + " / " + year
                 }
             }
@@ -61,7 +61,7 @@ generateCalendar = (month, year) => {
         calendar_days.appendChild(day)
     }
     //let DateSelect = document.getElementById("data")
-    document.getElementById('data').value =currDate.getDate() + "-" + (currDate.getMonth() + 1) + "-" + currDate.getFullYear()
+    document.getElementById('data').value = currDate.getFullYear() + "-" + (currDate.getMonth() + 1) + "-" +  currDate.getDate()
    // DateSelect.textContent = currDate.getDate() + " / " + (currDate.getMonth() + 1) + " / " + currDate.getFullYear()
 }   
 

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class InstituicaosTableSeeder extends Seeder
+class HotelTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,11 +11,11 @@ class InstituicaosTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('instituicaos')->insert([
+        DB::table('hotels')->insert([
             'nome' => 'HOTEL BELA VISTA',
         ]);
 
-        DB::table('instituicaos')->insert([
+        DB::table('hotels')->insert([
             'nome' => 'HOTEL VILA BUSINESS',
         ]);
     }
